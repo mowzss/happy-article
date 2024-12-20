@@ -19,7 +19,7 @@
         "app/admin/article": "src/admin/article",
         "app/model/article": "src/model/article"
       },
-      "del": "true"
+      "del": true
     }
   }
 }
