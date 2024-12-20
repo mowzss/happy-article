@@ -1,0 +1,17 @@
+{
+    "name": "mowzs/article",
+    "description": "文章",
+    "type": "happy-module",
+    "autoload": {
+        "psr-4": {
+            "Mowzs\\Article\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "sunboy",
+            "email": "qysk@vip.qq.com"
+        }
+    ],
+    "require": {}
+}
