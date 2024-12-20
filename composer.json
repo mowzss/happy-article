@@ -2,11 +2,6 @@
   "name": "mowzs/article",
   "description": "文章",
   "type": "happy-module",
-  "autoload": {
-    "psr-4": {
-      "app\\": "src/"
-    }
-  },
   "authors": [
     {
       "name": "sunboy",
