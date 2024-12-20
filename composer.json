@@ -1,17 +1,30 @@
 {
-    "name": "mowzs/article",
-    "description": "文章",
-    "type": "happy-module",
-    "autoload": {
-        "psr-4": {
-            "Mowzs\\Article\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "sunboy",
-            "email": "qysk@vip.qq.com"
-        }
-    ],
-    "require": {}
+  "name": "mowzs/article",
+  "description": "文章",
+  "type": "happy-module",
+  "autoload": {
+    "psr-4": {
+      "app\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "sunboy",
+      "email": "qysk@vip.qq.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.0.0",
+    "mowzs/lib": "dev-master"
+  },
+  "extra": {
+    "module": {
+      "make": {
+        "app/home/article": "src/home/article",
+        "app/admin/article": "src/admin/article",
+        "app/model/article": "src/model/article"
+      },
+      "del": "true"
+    }
+  }
 }
