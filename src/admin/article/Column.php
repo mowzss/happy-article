@@ -4,8 +4,8 @@ declare (strict_types=1);
 namespace app\admin\article;
 
 use app\common\controllers\BaseAdmin;
+use app\common\traits\CrudTrait;
 use app\model\article\ArticleColumn;
-use app\traits\CrudTrait;
 use think\App;
 
 /**
