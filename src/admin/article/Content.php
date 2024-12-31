@@ -8,6 +8,7 @@ use app\model\article\ArticleColumn;
 use app\model\article\ArticleContent;
 use app\model\article\ArticleField;
 use app\model\article\ArticleModel;
+use app\model\article\ArticleTag;
 
 class Content extends ContentAdmin
 {
@@ -31,4 +32,6 @@ class Content extends ContentAdmin
      * @var string
      */
     protected static string $modelModelClass = ArticleModel::class;
+
+    protected static string $tagModelClass = ArticleTag::class;
 }
