@@ -2,7 +2,9 @@
 
 namespace app\admin\article;
 
-class Setting
+use app\common\controllers\module\admin\SettingAdmin;
+
+class Setting extends SettingAdmin
 {
 
 }
