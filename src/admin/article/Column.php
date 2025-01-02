@@ -4,20 +4,16 @@ declare (strict_types=1);
 namespace app\admin\article;
 
 use app\common\controllers\module\admin\ColumnAdmin;
-use app\common\traits\CrudTrait;
 use app\model\article\ArticleColumn;
-use think\App;
+use app\model\article\ArticleModel;
 
 /**
  * 栏目管理
  */
 class Column extends ColumnAdmin
 {
-    use CrudTrait;
 
-    public function __construct(App $app, ArticleColumn $column)
-    {
-        parent::__construct($app);
-        $this->model = $column;
-    }
+    protected static string $moduleModelClass = ArticleModel::class;
+
+    protected static string $modelClass = ArticleColumn::class;
 }
