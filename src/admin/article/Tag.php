@@ -2,8 +2,8 @@
 
 namespace app\admin\article;
 
-use app\common\controllers\module\admin\TagAdmin;
 use app\model\article\ArticleTag;
+use mowzs\lib\module\controller\admin\TagAdmin;
 
 class Tag extends TagAdmin
 {

@@ -3,9 +3,9 @@ declare (strict_types=1);
 
 namespace app\admin\article;
 
-use app\common\controllers\module\admin\ColumnAdmin;
 use app\model\article\ArticleColumn;
 use app\model\article\ArticleModel;
+use mowzs\lib\module\controller\admin\ColumnAdmin;
 
 /**
  * 栏目管理

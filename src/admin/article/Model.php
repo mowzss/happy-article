@@ -2,9 +2,9 @@
 
 namespace app\admin\article;
 
-use app\common\controllers\module\admin\ModelAdmin;
 use app\model\article\ArticleField;
 use app\model\article\ArticleModel;
+use mowzs\lib\module\controller\admin\ModelAdmin;
 
 class Model extends ModelAdmin
 {

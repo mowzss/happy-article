@@ -2,11 +2,11 @@
 
 namespace app\admin\article;
 
-use app\common\controllers\module\admin\FieldAdmin;
 use app\model\article\ArticleColumn;
 use app\model\article\ArticleContent;
 use app\model\article\ArticleField;
 use app\model\article\ArticleModel;
+use mowzs\lib\module\controller\admin\FieldAdmin;
 
 class Field extends FieldAdmin
 {

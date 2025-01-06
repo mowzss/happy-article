@@ -2,7 +2,7 @@
 
 namespace app\model\article;
 
-use app\common\model\TagBaseModel;
+use mowzs\lib\module\model\TagBaseModel;
 
 class ArticleTag extends TagBaseModel
 {

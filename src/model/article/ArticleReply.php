@@ -2,7 +2,7 @@
 
 namespace app\model\article;
 
-use app\common\model\ReplyBaseModel;
+use mowzs\lib\module\model\ReplyBaseModel;
 
 class ArticleReply extends ReplyBaseModel
 {

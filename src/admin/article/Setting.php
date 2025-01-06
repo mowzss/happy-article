@@ -2,7 +2,7 @@
 
 namespace app\admin\article;
 
-use app\common\controllers\module\admin\SettingAdmin;
+use mowzs\lib\module\controller\admin\SettingAdmin;
 
 class Setting extends SettingAdmin
 {

@@ -3,7 +3,7 @@ declare (strict_types=1);
 
 namespace app\model\article;
 
-use app\common\model\FieldBaseModel;
+use mowzs\lib\module\model\FieldBaseModel;
 
 class ArticleField extends FieldBaseModel
 {
