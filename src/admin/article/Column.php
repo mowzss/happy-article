@@ -12,7 +12,6 @@ use mowzs\lib\module\controller\admin\ColumnAdmin;
  */
 class Column extends ColumnAdmin
 {
-
     protected static string $moduleModelClass = ArticleModel::class;
 
     protected static string $modelClass = ArticleColumn::class;
