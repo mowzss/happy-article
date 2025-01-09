@@ -20,6 +20,9 @@
         "app/admin/article": "src/admin/article",
         "app/model/article": "src/model/article"
       },
+      "copy": {
+        "route/article.php": "stc/route/article.php"
+      },
       "del": true
     }
   }
