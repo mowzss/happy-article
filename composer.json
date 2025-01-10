@@ -19,8 +19,8 @@
         "app/home/article": "src/home/article",
         "app/admin/article": "src/admin/article",
         "app/model/article": "src/model/article",
-        "app/common/install/article": "src/install/article",
-        "app/common/upgrade/article": "src/upgrade/article"
+        "app/common/install/article": "src/common/install/article",
+        "app/common/upgrade/article": "src/common/upgrade/article"
       },
       "copy": {
         "route/article.php": "stc/route/article.php"
