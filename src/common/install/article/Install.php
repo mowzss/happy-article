@@ -38,14 +38,9 @@ class Install
     private function installSystemMenu(): void
     {
         $menuService = new MenuService();
-        $menuService->insertMenusBySlot($this->menu, $this->slot);
+        $menuService->insertMenusBySlot($this->menu, 'content');
     }
 
-    /**
-     * 系统菜单插入位置
-     * @var string
-     */
-    private string $slot = "content";
     /**
      * 菜单数据
      * @var array|array[]
