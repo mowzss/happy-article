@@ -38,7 +38,7 @@ class Install
     private function installSystemMenu(): void
     {
         $menuService = new MenuService();
-        $menuService->insertMenus($this->menu);
+        $menuService->insertMenus($this->menu, $this->slot);
     }
 
     /**
