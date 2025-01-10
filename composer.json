@@ -18,7 +18,8 @@
       "make": {
         "app/home/article": "src/home/article",
         "app/admin/article": "src/admin/article",
-        "app/model/article": "src/model/article"
+        "app/model/article": "src/model/article",
+        "app/common/install/article": "stc/install/article"
       },
       "copy": {
         "route/article.php": "stc/route/article.php"
