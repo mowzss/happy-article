@@ -93,7 +93,7 @@ CREATE TABLE `ha_article_content_1`
     `extend`      text COMMENT '扩展字段',
     `create_time` int(10) UNSIGNED      NOT NULL DEFAULT '0' COMMENT '创建时间',
     `update_time` int(10) UNSIGNED      NOT NULL DEFAULT '0' COMMENT '修改时间',
-    `delete_time` int(10) UNSIGNED      NOT NULL DEFAULT '0' COMMENT '软删除'
+    `delete_time` int(10) UNSIGNED               DEFAULT NULL COMMENT '软删除'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4 COMMENT ='测试';
 
