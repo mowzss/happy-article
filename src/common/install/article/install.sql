@@ -105,8 +105,9 @@ CREATE TABLE `ha_article_content_1`
 
 CREATE TABLE `ha_article_content_1s`
 (
-    `id`      bigint(20) UNSIGNED NOT NULL COMMENT '主键ID',
-    `content` longtext COMMENT '内容'
+    `id`          bigint(20) UNSIGNED NOT NULL COMMENT '主键ID',
+    `content`     longtext COMMENT '内容',
+    `delete_time` int(10) UNSIGNED DEFAULT NULL COMMENT '软删除'
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4 COMMENT ='测试';
 
