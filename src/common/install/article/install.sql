@@ -85,7 +85,7 @@ CREATE TABLE `ha_article_content_1`
     `uid`         int(10) UNSIGNED      NOT NULL DEFAULT '0' COMMENT '用户ID',
     `view`        int(10) UNSIGNED      NOT NULL DEFAULT '0' COMMENT '浏览量',
     `status`      tinyint(4)            NOT NULL DEFAULT '1' COMMENT '状态：0未审 1已审 2推荐',
-    `replynum`    int(10) UNSIGNED      NOT NULL DEFAULT '0' COMMENT '评论数',
+    `reply_num`   int(10) UNSIGNED      NOT NULL DEFAULT '0' COMMENT '评论数',
     `description` text COMMENT '简介',
     `list`        int(10) UNSIGNED      NOT NULL DEFAULT '0' COMMENT '排序值',
     `images`      text                  NOT NULL COMMENT '组图',
