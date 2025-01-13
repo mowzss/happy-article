@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主机： localhost
--- 生成日期： 2025-01-10 11:39:58
+-- 生成日期： 2025-01-13 17:06:00
 -- 服务器版本： 5.7.44-log
 -- PHP 版本： 8.1.13
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- 数据库： `tp55_com`
+-- 数据库： `md_cn`
 --
 
 -- --------------------------------------------------------
@@ -68,7 +68,6 @@ CREATE TABLE `ha_article_content`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4 COMMENT ='测试';
 
-
 -- --------------------------------------------------------
 
 --
@@ -88,14 +87,14 @@ CREATE TABLE `ha_article_content_1`
     `reply_num`   int(10) UNSIGNED      NOT NULL DEFAULT '0' COMMENT '评论数',
     `description` text COMMENT '简介',
     `list`        int(10) UNSIGNED      NOT NULL DEFAULT '0' COMMENT '排序值',
-    `images`      text                  NOT NULL COMMENT '组图',
+    `images`      text COMMENT '封面图',
     `keywords`    varchar(500)          NOT NULL DEFAULT '' COMMENT '关键词',
     `extend`      text COMMENT '扩展字段',
     `create_time` int(10) UNSIGNED      NOT NULL DEFAULT '0' COMMENT '创建时间',
     `update_time` int(10) UNSIGNED      NOT NULL DEFAULT '0' COMMENT '修改时间',
     `delete_time` int(10) UNSIGNED               DEFAULT NULL COMMENT '软删除'
 ) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8mb4 COMMENT ='测试';
+  DEFAULT CHARSET = utf8mb4 COMMENT ='内容表';
 
 -- --------------------------------------------------------
 
@@ -109,7 +108,7 @@ CREATE TABLE `ha_article_content_1s`
     `content`     longtext COMMENT '内容',
     `delete_time` int(10) UNSIGNED DEFAULT NULL COMMENT '软删除'
 ) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8mb4 COMMENT ='测试';
+  DEFAULT CHARSET = utf8mb4 COMMENT ='内容表';
 
 -- --------------------------------------------------------
 
@@ -145,19 +144,19 @@ INSERT INTO `ha_article_field` (`id`, `mid`, `name`, `type`, `title`, `options`,
                                 `extend`, `status`, `create_time`, `update_time`, `is_search`)
 VALUES (1, 1, 'title', 'text', '标题', '', NULL, 1, 1000, 1,
         '{\"field\":{\"type\":\"VARCHAR\",\"length\":\"256\",\"unsigned\":\"0\",\"null\":\"0\",\"default\":\"\'\'\"},\"search\":{\"is_open\":\"1\",\"linq\":\"like\"},\"tables\":{\"is_show\":\"1\",\"templet\":\"\",\"switch\":{\"name\":\"\"},\"edit\":\"0\"},\"add\":{\"is_show\":\"1\"}}',
-        1, 1735613014, 1735613014, NULL),
+        1, 1736759009, 1736759009, NULL),
        (2, 1, 'keywords', 'text', '关键词', '', NULL, 0, 100, 1,
         '{\"field\":{\"type\":\"VARCHAR\",\"length\":\"2000\",\"unsigned\":\"0\",\"null\":\"0\",\"default\":\"\'\'\"},\"search\":{\"is_open\":\"0\",\"linq\":\"\"},\"tables\":{\"is_show\":\"0\",\"templet\":\"\",\"switch\":{\"name\":\"\"},\"edit\":\"0\"},\"add\":{\"is_show\":\"0\"}}',
-        1, 1735613014, 1735613014, NULL),
+        1, 1736759009, 1736759009, NULL),
        (3, 1, 'description', 'textarea', '简介', '', NULL, 0, 100, 1,
         '{\"field\":{\"type\":\"TEXT\",\"length\":\"\",\"unsigned\":\"0\",\"null\":\"0\",\"default\":\"\"},\"search\":{\"is_open\":\"0\",\"linq\":\"\"},\"tables\":{\"is_show\":\"0\",\"templet\":\"\",\"switch\":{\"name\":\"\"},\"edit\":\"0\"},\"add\":{\"is_show\":\"1\"}}',
-        1, 1735613014, 1735613014, NULL),
+        1, 1736759009, 1736759009, NULL),
        (4, 1, 'content', 'editor', '内容', '', NULL, 1, 1, 1,
         '{\"field\":{\"type\":\"LONGTEXT\",\"length\":\"\",\"unsigned\":\"0\",\"null\":\"0\",\"default\":\"\"},\"search\":{\"is_open\":\"0\",\"linq\":\"\"},\"tables\":{\"is_show\":\"0\",\"templet\":\"\",\"switch\":{\"name\":\"\"},\"edit\":\"0\"},\"add\":{\"is_show\":\"1\"}}',
-        1, 1735613014, 1735613014, NULL),
+        1, 1736759009, 1736759009, NULL),
        (5, 1, 'images', 'images', '组图', '', NULL, 0, 80, 1,
-        '{\"field\":{\"type\":\"TEXT\",\"length\":\"\",\"unsigned\":\"0\",\"null\":\"0\",\"default\":\"\"},\"search\":{\"is_open\":\"0\",\"linq\":\"\"},\"tables\":{\"is_show\":\"1\",\"templet\":\"image\",\"switch\":{\"name\":\"\"},\"edit\":\"0\"},\"add\":{\"is_show\":\"1\"}}',
-        1, 1735613014, 1735662989, NULL);
+        '{\"field\":{\"type\":\"TEXT\",\"length\":\"\",\"unsigned\":\"0\",\"null\":\"0\",\"default\":\"\"},\"search\":{\"is_open\":\"0\",\"linq\":\"\"},\"tables\":{\"is_show\":\"0\",\"templet\":\"\",\"switch\":{\"name\":\"\"},\"edit\":\"0\"},\"add\":{\"is_show\":\"1\"}}',
+        1, 1736759009, 1736759009, NULL);
 
 -- --------------------------------------------------------
 
@@ -207,7 +206,6 @@ CREATE TABLE `ha_article_tag`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4 COMMENT ='tag';
 
-
 -- --------------------------------------------------------
 
 --
@@ -239,13 +237,31 @@ ALTER TABLE `ha_article_column`
 -- 表的索引 `ha_article_content`
 --
 ALTER TABLE `ha_article_content`
-    ADD PRIMARY KEY (`id`);
+    ADD PRIMARY KEY (`id`),
+    ADD KEY `ha_article_content_mid_index` (`mid`),
+    ADD KEY `ha_article_content_cid_index` (`cid`),
+    ADD KEY `ha_article_content_uid_index` (`uid`),
+    ADD KEY `ha_article_content_view_index` (`view`),
+    ADD KEY `ha_article_content_status_index` (`status`),
+    ADD KEY `ha_article_content_list_index` (`list`),
+    ADD KEY `ha_article_content_create_time_index` (`create_time`),
+    ADD KEY `ha_article_content_update_time_index` (`update_time`);
 
 --
 -- 表的索引 `ha_article_content_1`
 --
 ALTER TABLE `ha_article_content_1`
-    ADD PRIMARY KEY (`id`);
+    ADD PRIMARY KEY (`id`),
+    ADD KEY `idx_status` (`status`),
+    ADD KEY `idx_cid` (`cid`),
+    ADD KEY `idx_is_pic` (`is_pic`),
+    ADD KEY `idx_uid` (`uid`),
+    ADD KEY `idx_mid` (`mid`),
+    ADD KEY `idx_view` (`view`),
+    ADD KEY `idx_reply_num` (`reply_num`),
+    ADD KEY `idx_create_time` (`create_time`),
+    ADD KEY `idx_update_time` (`update_time`),
+    ADD KEY `idx_delete_time` (`delete_time`);
 
 --
 -- 表的索引 `ha_article_content_1s`
@@ -309,15 +325,13 @@ ALTER TABLE `ha_article_content`
 -- 使用表AUTO_INCREMENT `ha_article_content_1`
 --
 ALTER TABLE `ha_article_content_1`
-    MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键ID',
-    AUTO_INCREMENT = 12;
+    MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键ID';
 
 --
 -- 使用表AUTO_INCREMENT `ha_article_content_1s`
 --
 ALTER TABLE `ha_article_content_1s`
-    MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键ID',
-    AUTO_INCREMENT = 12;
+    MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键ID';
 
 --
 -- 使用表AUTO_INCREMENT `ha_article_field`
