@@ -9,5 +9,3 @@ Route::group('article', function () {
     Route::rule('tag', 'article/tag/index');
     Route::rule('', 'article/index/index');
 })->pattern(['id' => '\d+', 'name' => '\w+']);
-
-Route::auto();
