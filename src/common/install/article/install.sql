@@ -62,6 +62,7 @@ CREATE TABLE `ha_article_content`
     `view`        int(10) UNSIGNED      NOT NULL DEFAULT '0' COMMENT '浏览量',
     `status`      tinyint(4)            NOT NULL DEFAULT '1' COMMENT '状态：0未审 1已审 2推荐',
     `list`        int(10) UNSIGNED      NOT NULL DEFAULT '0' COMMENT '排序值',
+    `agree`       int(10) UNSIGNED      NOT NULL DEFAULT '0' COMMENT '点赞',
     `create_time` int(10) UNSIGNED      NOT NULL DEFAULT '0' COMMENT '创建时间',
     `update_time` int(10) UNSIGNED      NOT NULL DEFAULT '0' COMMENT '修改时间',
     `delete_time` int(11)                        DEFAULT NULL
@@ -87,6 +88,7 @@ CREATE TABLE `ha_article_content_1`
     `reply_num`   int(10) UNSIGNED      NOT NULL DEFAULT '0' COMMENT '评论数',
     `description` text COMMENT '简介',
     `list`        int(10) UNSIGNED      NOT NULL DEFAULT '0' COMMENT '排序值',
+    `agree`       int(10) UNSIGNED      NOT NULL DEFAULT '0' COMMENT '点赞',
     `images`      text COMMENT '封面图',
     `keywords`    varchar(500)          NOT NULL DEFAULT '' COMMENT '关键词',
     `extend`      text COMMENT '扩展字段',
