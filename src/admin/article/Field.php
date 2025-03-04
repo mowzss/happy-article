@@ -8,6 +8,9 @@ use app\model\article\ArticleField;
 use app\model\article\ArticleModel;
 use mowzs\lib\module\controller\admin\FieldAdmin;
 
+/**
+ * 模型字段管理
+ */
 class Field extends FieldAdmin
 {
     /**

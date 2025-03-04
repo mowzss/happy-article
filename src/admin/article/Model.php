@@ -6,6 +6,9 @@ use app\model\article\ArticleField;
 use app\model\article\ArticleModel;
 use mowzs\lib\module\controller\admin\ModelAdmin;
 
+/**
+ * 模型管理
+ */
 class Model extends ModelAdmin
 {
     /**

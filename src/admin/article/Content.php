@@ -10,6 +10,9 @@ use app\model\article\ArticleModel;
 use app\model\article\ArticleTag;
 use mowzs\lib\module\controller\admin\ContentAdmin;
 
+/**
+ * 内容管理
+ */
 class Content extends ContentAdmin
 {
     /**
