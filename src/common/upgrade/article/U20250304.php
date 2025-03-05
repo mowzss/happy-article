@@ -2,21 +2,34 @@
 
 namespace app\common\upgrade\article;
 
+use think\Exception;
+
 class U20250304
 {
-
+    /**
+     * @return void
+     * @throws Exception
+     */
     public function run()
     {
         $this->updateModuleConfig();
     }
 
-    private function updateModuleConfig()
+    /**
+     * @throws Exception
+     */
+    private function updateModuleConfig(): void
     {
         $group_id = (new \app\model\system\SystemConfigGroup)->where('module', 'article')->column('id');
         if (count($group_id) > 1) {
             $new_group_id = (new \app\model\system\SystemConfigGroup)->where(['module' => 'article', 'title' => '模块设置'])->value('id');
             if (empty($new_group_id)) $group_id = $group_id[0];
             else $group_id = $new_group_id;
+        } else {
+            $group_id = $group_id[0];
+        }
+        if (empty($group_id)) {
+            throw new Exception('分组id为空');
         }
         (new \app\model\system\SystemConfig)->insertAll([
             [
