@@ -7,7 +7,6 @@ use app\model\article\ArticleColumn;
 use app\model\article\ArticleContent;
 use app\model\article\ArticleField;
 use app\model\article\ArticleModel;
-use app\model\article\ArticleTag;
 use mowzs\lib\module\controller\admin\ContentAdmin;
 
 /**
@@ -36,5 +35,5 @@ class Content extends ContentAdmin
      */
     protected static string $modelModelClass = ArticleModel::class;
 
-    protected static string $tagModelClass = ArticleTag::class;
+
 }
