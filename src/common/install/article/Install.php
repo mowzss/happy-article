@@ -2,8 +2,8 @@
 
 namespace app\common\install\article;
 
+use app\logic\system\MenuLogic;
 use app\model\system\SystemConfigGroup;
-use app\service\system\MenuService;
 
 /**
  * 模块安装
@@ -49,8 +49,8 @@ class Install
 
     private function installSystemMenu(): void
     {
-        $menuService = new MenuService();
-        $menuService->insertMenusBySlot($this->menu, 'content');
+        $MenuLogic = new MenuLogic();
+        $MenuLogic->insertMenusBySlot($this->menu, 'content');
     }
 
     /**
