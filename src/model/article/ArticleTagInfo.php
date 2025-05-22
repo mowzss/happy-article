@@ -2,9 +2,9 @@
 
 namespace app\model\article;
 
-use mowzs\lib\Model;
+use mowzs\lib\module\model\TagInfoBaseModel;
 
-class ArticleTagInfo extends Model
+class ArticleTagInfo extends TagInfoBaseModel
 {
 
 }
