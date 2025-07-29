@@ -3,8 +3,8 @@
 use think\facade\Route;
 
 Route::group('article', function () {
-    Route::rule(':id', 'article/content/index');
-    Route::rule('list_:id', 'article/column/index');
-    Route::rule('tag_:id', 'article/tag/show');
-    Route::rule('', 'article/index/index');
+    Route::rule(':id', 'content/index');
+    Route::rule('list_:id', 'column/index');
+    Route::rule('tag_:id', 'tag/show');
+    Route::rule('', 'index/index');
 })->pattern(['id' => '\d+']);
