@@ -8,4 +8,3 @@ Route::group('article', function () {
     Route::rule('tag_:id', 'article/tag/show');
     Route::rule('', 'article/index/index');
 })->pattern(['id' => '\d+']);
-Route::auto();
