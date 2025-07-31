@@ -20,9 +20,7 @@
         "app/admin/article": "src/admin/article",
         "app/model/article": "src/model/article",
         "app/common/install/article": "src/common/install/article",
-        "app/common/upgrade/article": "src/common/upgrade/article"
-      },
-      "copy": {
+        "app/common/upgrade/article": "src/common/upgrade/article",
         "route/article.php": "stc/route/article.php"
       },
       "del": true
