@@ -1,4 +1,5 @@
 <?php
+declare (strict_types=1);
 
 namespace app\admin\article;
 
@@ -11,5 +12,5 @@ use mowzs\lib\module\controller\admin\TagAdmin;
 class Tag extends TagAdmin
 {
     protected static string $modelClass = ArticleTag::class;
-    
+
 }
