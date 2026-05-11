@@ -2,9 +2,6 @@
 
 namespace app\model\article;
 
-use mowzs\lib\module\model\TagBaseModel;
+use mowzs\cms\model\TagBaseModel;
 
-class ArticleTag extends TagBaseModel
-{
-
-}
+class ArticleTag extends TagBaseModel {}

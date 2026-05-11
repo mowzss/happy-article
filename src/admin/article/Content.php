@@ -3,11 +3,11 @@ declare (strict_types=1);
 
 namespace app\admin\article;
 
-use app\model\article\ArticleColumn;
-use app\model\article\ArticleContent;
 use app\model\article\ArticleField;
 use app\model\article\ArticleModel;
-use mowzs\lib\module\controller\admin\ContentAdmin;
+use app\model\article\ArticleColumn;
+use app\model\article\ArticleContent;
+use mowzs\cms\controller\admin\ContentAdmin;
 
 /**
  * 内容管理

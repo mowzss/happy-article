@@ -2,9 +2,6 @@
 
 namespace app\home\article;
 
-use mowzs\lib\module\controller\home\TagHome;
+use mowzs\cms\controller\home\TagHome;
 
-class Tag extends TagHome
-{
-
-}
+class Tag extends TagHome {}

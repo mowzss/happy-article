@@ -2,9 +2,6 @@
 
 namespace app\home\article;
 
-use mowzs\lib\module\controller\home\ContentHome;
+use mowzs\cms\controller\home\ContentHome;
 
-class Content extends ContentHome
-{
-
-}
+class Content extends ContentHome {}

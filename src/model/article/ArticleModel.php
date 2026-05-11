@@ -3,9 +3,6 @@ declare (strict_types=1);
 
 namespace app\model\article;
 
-use mowzs\lib\module\model\ModelBaseModel;
+use mowzs\cms\model\ModelBaseModel;
 
-class ArticleModel extends ModelBaseModel
-{
-
-}
+class ArticleModel extends ModelBaseModel {}

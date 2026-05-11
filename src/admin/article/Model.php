@@ -5,7 +5,7 @@ namespace app\admin\article;
 
 use app\model\article\ArticleField;
 use app\model\article\ArticleModel;
-use mowzs\lib\module\controller\admin\ModelAdmin;
+use mowzs\cms\controller\admin\ModelAdmin;
 
 /**
  * 模型管理

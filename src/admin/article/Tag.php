@@ -4,7 +4,7 @@ declare (strict_types=1);
 namespace app\admin\article;
 
 use app\model\article\ArticleTag;
-use mowzs\lib\module\controller\admin\TagAdmin;
+use mowzs\cms\controller\admin\TagAdmin;
 
 /**
  * TAG标签管理

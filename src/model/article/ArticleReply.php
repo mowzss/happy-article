@@ -2,9 +2,6 @@
 
 namespace app\model\article;
 
-use mowzs\lib\module\model\ReplyBaseModel;
+use mowzs\cms\model\ReplyBaseModel;
 
-class ArticleReply extends ReplyBaseModel
-{
-
-}
+class ArticleReply extends ReplyBaseModel {}

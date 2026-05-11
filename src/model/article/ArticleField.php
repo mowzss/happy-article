@@ -3,9 +3,6 @@ declare (strict_types=1);
 
 namespace app\model\article;
 
-use mowzs\lib\module\model\FieldBaseModel;
+use mowzs\cms\model\FieldBaseModel;
 
-class ArticleField extends FieldBaseModel
-{
-
-}
+class ArticleField extends FieldBaseModel {}
