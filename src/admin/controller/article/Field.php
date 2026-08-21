@@ -1,7 +1,7 @@
 <?php
 declare (strict_types=1);
 
-namespace app\admin\article;
+namespace app\admin\controller\article;
 
 use app\model\article\ArticleField;
 use app\model\article\ArticleModel;
@@ -24,7 +24,7 @@ class Field extends FieldAdmin
      * @var string
      */
     protected static string $moduleModelClass = ArticleModel::class;
-
+    
     /**
      *内容 模型
      * @var string

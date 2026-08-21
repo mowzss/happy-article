@@ -17,12 +17,12 @@
   "extra": {
     "module": {
       "make": {
-        "app/home/Article.php": "src/home/Article.php",
-        "app/admin/article": "src/admin/article",
+        "app/home/controller/Article.php": "src/home/controller/Article.php",
+        "app/admin/controller/article": "src/admin/controller/article",
         "app/model/article": "src/model/article",
         "app/common/install/article": "src/common/install/article",
         "app/common/upgrade/article": "src/common/upgrade/article",
-        "route/article.php": "stc/route/article.php"
+        "app/route/article.php": "src/home/route/article.php"
       },
       "del": true
     }

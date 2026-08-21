@@ -1,11 +1,13 @@
 <?php
 declare (strict_types=1);
 
-namespace app\admin\article;
+namespace app\admin\controller\article;
 
 use mowzs\cms\controller\admin\SettingAdmin;
 
 /**
  * 模块设置
  */
-class Setting extends SettingAdmin {}
+class Setting extends SettingAdmin
+{
+}
