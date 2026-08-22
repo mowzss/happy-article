@@ -17,7 +17,7 @@
   "extra": {
     "module": {
       "make": {
-        "app/home/controller/Article.php": "src/home/controller/Article.php",
+        "app/home/controller/Article.php": "src/home/controller/Index.php",
         "app/admin/controller/article": "src/admin/controller/article",
         "app/model/article": "src/model/article",
         "app/common/install/article": "src/common/install/article",
