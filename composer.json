@@ -22,7 +22,7 @@
         "app/model/article": "src/model/article",
         "app/common/install/article": "src/common/install/article",
         "app/common/upgrade/article": "src/common/upgrade/article",
-        "app/route/article.php": "src/home/route/article.php"
+        "route/article.php": "stc/route/article.php"
       },
       "del": true
     }

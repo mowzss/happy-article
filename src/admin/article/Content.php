@@ -1,7 +1,7 @@
 <?php
 declare (strict_types=1);
 
-namespace app\admin\controller\article;
+namespace app\admin\article;
 
 use app\model\article\ArticleField;
 use app\model\article\ArticleModel;
@@ -35,5 +35,5 @@ class Content extends ContentAdmin
      */
     protected static string $modelModelClass = ArticleModel::class;
     
-    
+
 }

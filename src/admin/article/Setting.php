@@ -1,7 +1,7 @@
 <?php
 declare (strict_types=1);
 
-namespace app\admin\controller\article;
+namespace app\admin\article;
 
 use mowzs\cms\controller\admin\SettingAdmin;
 

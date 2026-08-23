@@ -1,7 +1,7 @@
 <?php
 declare (strict_types=1);
 
-namespace app\home\controller\article;
+namespace app\home\article;
 
 use mowzs\cms\controller\home\IndexHome;
 
