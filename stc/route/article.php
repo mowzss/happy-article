@@ -3,12 +3,12 @@
 use think\facade\Route;
 
 Route::group('article', function () {
-    Route::get('', 'index/index');
+    Route::get('', 'article/index/index');
     //前台内容页
-    Route::get(':id', 'content/index');
+    Route::get(':id', 'article/content/index');
     //前台栏目内容列表
-    Route::get('list_:id', 'column/index');
+    Route::get('list_:id', 'article/column/index');
     //前台标签内容列表
-    Route::get('tag_:id', 'tag/show');
-    Route::get('tag', 'tag/index');
-})->pattern(['id' => '\d+'])->namespace('app\home\article');
+    Route::get('tag_:id', 'article/tag/show');
+    Route::get('tag', 'article/tag/index');
+})->pattern(['id' => '\d+']);
