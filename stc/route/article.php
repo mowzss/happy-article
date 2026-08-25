@@ -9,6 +9,6 @@ Route::group('article', function () {
     //前台栏目内容列表
     Route::get('list_:id', 'article/columns/index');
     //前台标签内容列表
-    Route::get('tag_:id', 'article/tags/show');
-    Route::get('tag', 'article/tags/index');
+    Route::get('tag_:id', 'article/tag/show');
+    Route::get('tag', 'article/tag/index');
 })->pattern(['id' => '\d+']);

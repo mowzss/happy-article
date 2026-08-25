@@ -5,6 +5,6 @@ namespace app\home\article;
 
 use mowzs\cms\controller\home\TagHome;
 
-class Tags extends TagHome
+class Tag extends TagHome
 {
 }
