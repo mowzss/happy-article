@@ -10,9 +10,9 @@
   ],
   "require": {
     "php": ">=8.0.0",
-    "mowzs/lib": "dev-master",
     "mowzs/system": "dev-master",
-    "mowzs/cms-core": "dev-master"
+    "mowzs/cms-core": "dev-master",
+    "mowzs/happy-module-installer": "dev-master"
   },
   "extra": {
     "module": {
