@@ -1,5 +1,5 @@
 {
-  "name": "mowzs/article",
+  "name": "mowzs/happy-admin-article",
   "description": "文章",
   "type": "happy-module",
   "authors": [
@@ -9,10 +9,10 @@
     }
   ],
   "require": {
-    "php": ">=8.0.0",
-    "mowzs/system": "dev-master",
-    "mowzs/cms-core": "dev-master",
-    "mowzs/happy-module-installer": "dev-master"
+    "php": ">=8.2.0",
+    "mowzs/happy-admin-system": "dev-master",
+    "mowzs/happy-admin-cms-core": "dev-master",
+    "mowzs/happy-admin-installer": "dev-master"
   },
   "extra": {
     "module": {
