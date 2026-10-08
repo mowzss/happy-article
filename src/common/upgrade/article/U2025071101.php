@@ -1,5 +1,6 @@
 <?php
 
+
 namespace app\common\upgrade\article;
 
 use think\Exception;
@@ -14,7 +15,7 @@ class U2025071101
     {
         $this->updateModuleConfig();
     }
-
+    
     /**
      * @throws Exception
      */
@@ -56,8 +57,8 @@ class U2025071101
                 'list' => '0',
                 'module' => 'article',
                 'status' => '1',
-            ]
+            ],
         ]);
     }
-
+    
 }

@@ -1,5 +1,6 @@
 <?php
 
+
 namespace app\common\install\article;
 
 use app\logic\system\MenuLogic;
@@ -14,7 +15,7 @@ use app\model\system\SystemConfigGroup;
  */
 class Install
 {
-
+    
     public function run(): void
     {
         //插入模块管理菜单
@@ -22,11 +23,12 @@ class Install
         //插入模块配置信息
         $this->installSysConfig();
     }
-
+    
     private function installSysConfig(): void
     {
         $config_group = (new SystemConfigGroup())->insert(['title' => '文章模块设置', 'sys_show' => '0', 'module' => 'article', 'status' => '1'], true);
-        (new \app\model\system\SystemConfig)->insertAll([
+        (new \app\model\system\SystemConfig)->insertAll(
+            [
                 ['name' => 'name', 'type' => 'text', 'title' => '模块名称', 'group_id' => $config_group, 'options' => '', 'help' => '当前模块首页的SEO信息', 'value' => '文章模块', 'module' => 'article', 'status' => '1',],
                 ['name' => 'seo_title', 'type' => 'text', 'title' => 'SEO标题', 'group_id' => $config_group, 'options' => '', 'help' => '当前模块首页的SEO信息', 'value' => '文章模块', 'module' => 'article', 'status' => '1',],
                 ['name' => 'seo_keywords', 'type' => 'text', 'title' => 'SEO关键词', 'group_id' => $config_group, 'options' => '', 'help' => '当前模块首页的SEO信息', 'value' => '文章模块', 'module' => 'article', 'status' => '1',],
@@ -41,18 +43,18 @@ class Install
                 ['name' => 'content_purifer_html', 'type' => 'textarea', 'title' => 'HTML过滤规则', 'group_id' => $config_group, 'options' => '', 'help' => '设置允许使用的的html,推荐使用 h2,h3,h4,h5,p,strong,a[href|title],span[style],img[width|height|alt|src],table 可以根据自己的实际需求进行增删', 'value' => 'h2,h3,h4,h5,p,strong,a[href|title],span,img[width|height|alt|src],table', 'module' => 'article', 'status' => '1'],
                 ['name' => 'content_purifer_css', 'type' => 'textarea', 'title' => 'CSS过滤规则', 'group_id' => $config_group, 'options' => '', 'help' => '可自行设置允许的css属性 默认数据 font,font-size,font-weight,font-style,font-family,text-decoration,padding-left,color,background-color,text-align 可根据自己实际需求进行增删', 'value' => 'font,font-size,font-weight,font-style,font-family,text-decoration,padding-left,color,background-color,text-align', 'module' => 'article', 'status' => '1',],
                 ['name' => 'content_purifer_remove_empty', 'type' => 'radio', 'title' => '移除空行', 'group_id' => $config_group, 'options' => '1|是
-0|否', 'help' => '删除不含内容的段落标签 请按需合理设置', 'value' => '0', 'module' => 'article', 'status' => '1',]
-
+0|否', 'help' => '删除不含内容的段落标签 请按需合理设置', 'value' => '0', 'module' => 'article', 'status' => '1',],
+            
             ]
         );
     }
-
+    
     private function installSystemMenu(): void
     {
         $MenuLogic = new MenuLogic();
         $MenuLogic->insertMenusBySlot($this->menu, 'content');
     }
-
+    
     /**
      * 菜单数据
      * @var array|array[]
@@ -75,6 +77,6 @@ class Install
                 ['title' => '模型设计', 'icon' => '', 'node' => 'article/model/index', 'params' => '', 'class' => '1', 'list' => '6000', 'status' => '1'],
             ],
         ],
-
+    
     ];
 }
