@@ -6,7 +6,11 @@ Route::group('article', function () {
     
     //跳转规则
     Route::redirect('content/index/id/<id>', '/article/<id>.html');
+    Route::redirect('details/index/id/<id>', '/article/<id>.html');
     Route::redirect('column/index/id/<id>', '/article/list_<id>.html');
+    Route::redirect('columns/index/id/<id>', '/article/list_<id>.html');
+    Route::redirect('tag/show/id/<id>', '/article/tag_<id>.html');
+    Route::redirect('index', '/article.html');
     
     Route::get('', 'article/index/index');
     //前台内容页
