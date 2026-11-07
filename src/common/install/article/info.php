@@ -19,6 +19,37 @@ return [
         'install.sql',
         app\common\install\article\Install::class,
     ],
-    //安装模块标记 系统唯一
+    //卸载声明：仅清理以下声明范围内的数据，未声明的数据不会被删除
+    'uninstall' => [
+        //需要删除的数据表（ha_ 会按当前数据库前缀自动替换）
+        'tables' => [
+            'ha_article_column',
+            'ha_article_content',
+            'ha_article_content_1',
+            'ha_article_content_1s',
+            'ha_article_field',
+            'ha_article_model',
+            'ha_article_tag',
+            'ha_article_tag_info',
+        ],
+        //后台菜单：按 slot 与节点前缀删除（含所有子菜单）
+        'menus' => [
+            'slot' => 'content_article',
+            'node_prefix' => 'article/',
+        ],
+        //模块配置：system_config / system_config_group 中的 module 标记
+        'configs' => [
+            'module' => 'article',
+        ],
+        //需要删除的已部署文件（相对项目根目录）
+        'files' => [
+            'app/home/article',
+            'app/admin/article',
+            'app/model/article',
+            'app/common/install/article',
+            'app/common/upgrade/article',
+            'route/article.php',
+        ],
+    ],
     'keyword' => 'article'
 ];
