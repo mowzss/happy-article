@@ -42,8 +42,11 @@ CREATE TABLE `ha_article_column`
     `view_file`       varchar(128)  DEFAULT '' COMMENT '模板路径',
     `status`          int(11)       DEFAULT '1' COMMENT '状态',
     `create_time`     int(11)       DEFAULT '0' COMMENT '创建时间',
-    `update_time`     int(11)       DEFAULT '0' COMMENT '更新时间'
-) ENGINE = InnoDB
+    `update_time`     int(11)       DEFAULT '0' COMMENT '更新时间',
+    `type` int DEFAULT 1 NULL COMMENT '栏目类型 1正常栏目 2节点链接 3外部链接',
+    `node` varchar(128) DEFAULT '' NULL COMMENT '节点',
+    `params` varchar(512) DEFAULT '' NULL COMMENT '节点参数',
+    `url` varchar(512) DEFAULT '' NULL COMMENT '链接') ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4 COMMENT ='分类表';
 
 -- --------------------------------------------------------
@@ -194,6 +197,7 @@ CREATE TABLE `ha_article_tag`
 (
     `id`              int(10) UNSIGNED      NOT NULL,
     `title`           varchar(256)          NOT NULL DEFAULT '' COMMENT '标题',
+    `spy` varchar(1) NOT NULL DEFAULT '' COMMENT '首拼音',
     `view`            mediumint(8) UNSIGNED NOT NULL DEFAULT '0' COMMENT '浏览量',
     `count`           int(11)               NOT NULL DEFAULT '0' COMMENT '内容总数',
     `status`          tinyint(4)            NOT NULL DEFAULT '1' COMMENT '状态：0未审 1已审 2推荐',
