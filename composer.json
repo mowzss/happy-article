@@ -18,6 +18,7 @@
     "module": {
       "make": {
         "app/home/article": "src/home/article",
+        "app/api/article": "src/api/article",
         "app/admin/article": "src/admin/article",
         "app/model/article": "src/model/article",
         "app/common/install/article": "src/common/install/article",
